@@ -1,0 +1,32 @@
+.computer {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  padding: 1px;
+  margin: 1px;
+  opacity: 0.5;
+}
+
+.computer-colors, .player-colors, .game-buttons {
+  text-align: center;
+}
+
+.computer-red {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.computer-green {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+.computer-blue {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+.computer-yellow {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+.full-color {
+  opacity: 1;
+}

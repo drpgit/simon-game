@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simon Game</title>
+    <script src="js/jquery-3.1.1.js" charset="utf-8"></script>
+    <script src="js/game.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <h3>Simon Game</h3>
+          <p>Click the 'Start' button to begin a new game.  The computer will display a flashing color which you must then match by clicking one of the color buttons.  This will continue - each turn increasing in length of the color sequence - until you incorrectly match the computer's sequence.  At any point you can choose to start over with a new game by pressing the 'New Game' button.</p>
+          <hr>
+          <div class="computer-colors">
+            <div class="computer computer-red">
+              Red
+            </div>
+            <div class="computer computer-green">
+              Green
+            </div>
+            <div class="computer computer-yellow">
+              Yellow
+            </div>
+            <div class="computer computer-blue">
+              Blue
+            </div>
+          </div>
+          <hr>
+          <div class="player-colors">
+            <button type="button" class="btn btn-danger player player-red">Red</button>
+            <button type="button" class="btn btn-success player player-green">Green</button>
+            <button type="button" class="btn btn-warning player player-yellow">Yellow</button>
+            <button type="button" class="btn btn-primary player player-blue">Blue</button>
+          </div>
+          <hr>
+          <div class="game-buttons">
+            <span class="strict">Strict mode: <span class="strict-toggle"><input type="checkbox"></span></span>
+            <button type="button" class="btn btn-default game-start">Start</button>
+            <button type="button" class="btn btn-default game-new">New Game</button>
+            <span class="rounds">Count: <strong><span class="rounds-number">0</span></strong></span>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </body>
+</html>
