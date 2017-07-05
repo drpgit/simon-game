@@ -23,16 +23,16 @@ MyGame.prototype.newEvaluate = function() {
   if (this.theResponse.length === this.theTiles.length && this.theResponse[this.clicks - 1] === this.theTiles[this.clicks - 1] && this.rounds === 19) {
     this.rounds += 1;
     $(".rounds-number").html(this.rounds);
-    alert("You won! Great job!");
+    $(".message-text").html("You Win! Play Again?");
     this.newStart();
   } else if (this.theResponse.length === this.theTiles.length && this.theResponse[this.clicks - 1] === this.theTiles[this.clicks - 1]) {
     this.newRound();
     this.rounds += 1;
     $(".rounds-number").html(this.rounds);
   } else if (this.theResponse[this.clicks - 1] !== this.theTiles[this.clicks - 1] && this.strict) {
-    alert("sorry, you've lost");
+    $(".message-text").html("Sorry, you lost... Play Again?");
   } else if (this.theResponse[this.clicks - 1] !== this.theTiles[this.clicks - 1] && this.strict === false) {
-    alert("that wasn't quite right, try it again");
+    $(".message-text").html("Not quite right. Try that move again?");
     this.theResponse = [];
     this.clicks = 0;
     this.animate(this.theTiles);
@@ -40,6 +40,7 @@ MyGame.prototype.newEvaluate = function() {
 };
 
 MyGame.prototype.newResponse = function(color) {
+  $(".message-text").html("Concentrate!");
   if (color) {
     var audio = new Audio('media/simonSound' + color + '.mp3');
     this.theResponse.push(color);
@@ -60,6 +61,7 @@ MyGame.prototype.newStart = function() {
   this.theTiles = [];
   $(".rounds-number").html(0);
   this.rounds = 0;
+  $(".message-text").html("Concentrate!");
   this.newRound();
 };
 
